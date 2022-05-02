@@ -1,0 +1,31 @@
+[package]
+name = "poseidon-store"
+version = "0.1.0"
+authors = ["PoseidonCompute Developers <support@poseidon.compute>"]
+license = "LicenseRef-BSLv1.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-channel = "1.6.1"
+async-dup = "1.2.2"
+futures-lite = "1.12.0"
+serde = { version = "1.0.136", features = ["derive"] }
+sled = "0.34.7"
+smol = "1.2.5"
+tai64 = "4.0.0"
+poseidon-common = { features = [
+    "sled_kv",
+    "solana_client",
+    "http",
+    "rustls",
+], git = "https://github.com/poseidoncompute/PoseidonCommon.git", rev = "ebfdc76" }
+camino = "1.0.7"
+directories = "4.0.1"
+async-fs = "1.5.0"
+anyhow = "1.0.57"
+hex = "0.4.3"
+solana-client = { git = "https://github.com/poseidoncompute/SolanaClient.git", rev = "1893181" }
+borsh = "0.9.3"
+[features]
